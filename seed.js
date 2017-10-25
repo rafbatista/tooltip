@@ -9,24 +9,26 @@ MongoClient.connect('mongodb://localhost/library', (err, db) => {
   const tooltips = db.collection('tooltips')
   tooltips
     .deleteMany({})
-    .insertMany([
-      {
-        id: 1,
-        tip: 'Saves Data'
-      },
-      {
-        id: 2,
-        tip: 'Erases Data'
-      },
-      {
-        id: 3,
-        tip: 'Edits Data'
-      },
-      {
-        id: 4,
-        tip: 'Does Nothing'
-      }
-    ])
+    .then(() => {
+      tooltips.insertMany([
+        {
+          id: 1,
+          tip: 'Saves Data'
+        },
+        {
+          id: 2,
+          tip: 'Erases Data'
+        },
+        {
+          id: 3,
+          tip: 'Edits Data'
+        },
+        {
+          id: 4,
+          tip: 'Does Nothing'
+        }
+      ])
+    })
     .catch(err => {
       console.error(err)
       process.exit(1)
