@@ -12,19 +12,19 @@ MongoClient.connect('mongodb://localhost/library', (err, db) => {
     .then(() => {
       tooltips.insertMany([
         {
-          id: 1,
+          id: 'top-left',
           tip: 'Saves Data'
         },
         {
-          id: 2,
+          id: 'top-right',
           tip: 'Erases Data'
         },
         {
-          id: 3,
+          id: 'btm-left',
           tip: 'Edits Data'
         },
         {
-          id: 4,
+          id: 'btm-right',
           tip: 'Does Nothing'
         }
       ])
