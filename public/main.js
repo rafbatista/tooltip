@@ -12,10 +12,6 @@ const getTips = () => {
           })
         $toolTip.addEventListener('mouseenter', (event) => {
           const { top, left, bottom, right } = event.target.getBoundingClientRect()
-          console.log(top)
-          console.log(left)
-          console.log(window.innerHeight - bottom)
-          console.log(window.innerWidth - right)
           if (window.innerHeight - bottom > 25 && window.innerWidth - right > 30) {
             $toolTip.classList.remove('top', 'left')
             $toolTip.classList.add('bottom')
@@ -35,12 +31,3 @@ const getTips = () => {
 }
 
 getTips()
-
-const renderButton = (tip) => {
-  const $tooltip = document.createElement('button')
-  $tooltip.setAttribute('class', 'tooltip')
-  $tooltip.setAttribute('id', tip.id)
-  $tooltip.textContent = tip.tip
-  return $tooltip
-}
-const allTips = []
