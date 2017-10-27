@@ -8,4 +8,4 @@ $ npm run seed
 $ npm start
 
 # Screenshot
-![issue-1](https://user-images.githubusercontent.com/31448950/32117006-a55b122e-bb01-11e7-8f92-86a460acc488.gif)
+![issue-1](https://user-images.githubusercontent.com/31448950/32117206-62e61636-bb02-11e7-9ca2-e0db7b7be648.gif)
