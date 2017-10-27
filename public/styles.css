@@ -1,0 +1,50 @@
+body {
+  background: olive;
+}
+
+button {
+  font-size: 12px;
+}
+
+.top-left {
+  position: absolute;
+}
+
+.top-right {
+  position: absolute;
+  left: 96vw;
+}
+
+.bottom-left {
+  position: absolute;
+  top: 97vh;
+}
+
+.bottom-right {
+  position: absolute;
+  top: 97vh;
+  left: 97vw;
+}
+
+.tip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  width: 7vw;
+  background-color: white;
+  border: 2px dotted black;
+  font-size: 11px;
+}
+
+.bottom[data-tooltip]::after {
+  top: 5vh;
+  right: -4vw;
+}
+
+.left[data-tooltip]::after {
+  right: 4vw;
+}
+
+.top[data-tooltip]::after {
+  bottom: 5vh;
+  right: -4.5vw;
+}
