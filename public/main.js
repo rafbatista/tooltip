@@ -15,7 +15,6 @@ const getTips = () => {
           if (window.innerHeight - bottom > 25 && window.innerWidth - right > 30) {
             $toolTip.classList.remove('top', 'left')
             $toolTip.classList.add('bottom')
-            console.log(tips[0].tip)
           }
           else if (top > 20 && window.innerWidth - right > 30) {
             $toolTip.classList.remove('bottom', 'left')
